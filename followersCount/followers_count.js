@@ -6,6 +6,11 @@ function increaseCount() {
   checkCountValue(); // Vérifier la valeur du count et afficher les messages
 }
 
+function freset() {
+    count = 0;
+}
+
+
 function displayCount() {
 document.getElementById('countDisplay').innerHTML=count; // Affiche le compte dans l'HTML
 }
@@ -13,7 +18,9 @@ document.getElementById('countDisplay').innerHTML=count; // Affiche le compte da
 function checkCountValue() {
   if (count === 10) {
     alert("Votre publication Instagram a gagné 10 abonnés ! Félicitations !");
-  } else if (count === 20) {
+} else if (count === 20) {
     alert("Votre publication Instagram a gagné 20 abonnés ! Continuez comme ça !");
+} else if (count === 0) {
+    alert("le compteur de followers a été réinitialisé");
   }
 }
