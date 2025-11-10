@@ -7,9 +7,10 @@ function increaseCount() {
 }
 
 function freset() {
-    count = 0;
+  count = 0;
+  displayCount(); // Affiche le compte
+  checkCountValue(); // Vérifier la valeur du count et afficher les messages
 }
-
 
 function displayCount() {
 document.getElementById('countDisplay').innerHTML=count; // Affiche le compte dans l'HTML
