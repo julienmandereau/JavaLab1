@@ -6,7 +6,7 @@ function total() {
  art2 = parseFloat(document.getElementById('art2').value);
  art3 = parseFloat(document.getElementById('art3').value);
 
- let total = lenart1 + art2 +art3 ;
+ let total = art1 + art2 +art3 ;
   document.getElementById('result').innerText = `Merci de me payer: ${total}`;
 }
 
