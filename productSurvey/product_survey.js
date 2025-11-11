@@ -7,9 +7,6 @@ function submitFeedback() {
     const productType = document.getElementById('productType').value;
     const feedback = document.getElementById('feedbackText').value;
 
-	const submitButton=document.getElementById('submitBtn');
-	submitButton.onclick = submitFeedback;
-	alert('Thank you for your valuable feedback')
 
     document.getElementById('userName').innerHTML = username;
     document.getElementById('userAge').innerHTML = age;
@@ -21,6 +18,10 @@ function submitFeedback() {
 
     document.getElementById('userInfo').style.display = 'block';
 }
+
+const submitButton=document.getElementById('submitBtn');
+submitButton.onclick = submitFeedback;
+alert('Thank you for your valuable feedback')
 
 document.addEventListener('keydown', function(event) {
    if (event.key === 'Enter') {
