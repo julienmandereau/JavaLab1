@@ -6,7 +6,7 @@ function submitFeedback() {
     const designation = document.getElementById('designation').value;
     const productType = document.getElementById('productType').value;
     const feedback = document.getElementById('feedbackText').value;
-    const userExperince = document.getElementById('userExperince').value;
+    const Experince = document.getElementById('userExperince').value;
 
 
     document.getElementById('userName').innerHTML = username;
@@ -16,14 +16,15 @@ function submitFeedback() {
     document.getElementById('userDesignation').innerHTML = designation;
     document.getElementById('userProductChoice').innerHTML = productType;
     document.getElementById('userFeedback').innerHTML = feedback;
-    document.getElementById('userExperince').innerHTML = userExperince;
+    document.getElementById('userExperince2').innerHTML = Experince;
 
     document.getElementById('userInfo').style.display = 'block';
+    alert('Thank you for your valuable feedback')
+
 }
 
 const submitButton=document.getElementById('submitBtn');
 submitButton.onclick = submitFeedback;
-alert('Thank you for your valuable feedback')
 
 document.addEventListener('keydown', function(event) {
    if (event.key === 'Enter') {
