@@ -26,9 +26,16 @@ function showbooks() {
         <p><strong>Nom de l'auteur :</strong> ${book.authorName}</p>
         <p><strong>Description du livre :</strong> ${book.bookDescription}</p>
         <p><strong>Nombre de pages :</strong> ${book.pagesNumber} page(s)</p>
-        <button onclick="editbook(${index})">Modifier</button>`
-    );
+        <button onclick="editbook(${index})">Modifier</button>
+        <button onclick="deletebook(${index})">Delete</button>`
+        );
     document.getElementById('books').innerHTML = booksDiv.join('');
+}
+
+function deletebook(index) {
+    // Remove the book entry at the given index
+    books.splice(index, 1);
+    showbooks(); // Refresh the book list after deletion
 }
 
 function editbook(index) {
@@ -46,4 +53,4 @@ function clearInputs() {
             document.getElementById('authorName').value = '';
             document.getElementById('bookDescription').value = '';
             document.getElementById('pagesNumber').value = '';
-} 
+}
