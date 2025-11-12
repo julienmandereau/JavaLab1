@@ -27,6 +27,9 @@ function startTest() {
         var timeElapsed = (endTime - startTime) / 1000; // en secondes
         var userTypedText = document.getElementById("userInput").value;
 
+        // Nombres de cartères tapés
+        const totalfrap = userTypedText.length;
+        
         // Diviser le texte en utilisant une expression régulière pour compter les mots correctement
         var typedWords = userTypedText.split(/\s+/).filter(function (word) {
             return word !== "";
@@ -41,6 +44,7 @@ function startTest() {
         // Afficher les résultats
         var outputDiv = document.getElementById("output");
         outputDiv.innerHTML = "<h2>Résultats du test de dactylographie :</h2>" +
+            "<p>caractères tapés : " + totalfrap + "</p>" +
             "<p>Mots tapés : " + typedWords + "</p>" +
             "<p>Temps écoulé : " + timeElapsed.toFixed(2) + " secondes</p>" +
             "<p>Mots par minute (WPM) : " + wpm + "</p>";
