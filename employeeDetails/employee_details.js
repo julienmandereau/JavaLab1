@@ -1,7 +1,7 @@
 const employees = [
-    { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000 },
-    { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000 },
-    { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000 },
+    { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000, specialization:'Jav' },
+    { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000, specialization:'Pyt' },
+    { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000, specialization:'Jav' },
     //... D'autres enregistrements d'employés peuvent être ajoutés ici
   ];
 
@@ -18,8 +18,13 @@ function calculateTotalSalaries() {
     alert(`Total Salaries: $${totalSalaries}`);
   }
 
-function displayHREmployees() {
+  function displayHREmployees() {
     const hrEmployees = employees.filter(employee => employee.department === 'HR');
+     const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
+     document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
+}
+function displaysjEmployees() {
+    const hrEmployees = employees.filter(employee => employee.specialization === 'Jav');
      const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
      document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
 }
@@ -33,4 +38,3 @@ function findEmployeeById(employeeId) {
       document.getElementById('employeesDetails').innerHTML = 'aucun employé n\'a été trouvé avec cet ID';
      }
  }
- 
