@@ -6,8 +6,10 @@ xhr.open('GET', url, true);
 
 xhr.responseType = 'json';
 
+xhr.onload = function() {
 var articles = xhr.response.articles;
 var articlesDiv = document.getElementById('articles');
+
 
   articles.forEach(function(article) {
       var articleDiv = document.createElement('div');
@@ -48,6 +50,7 @@ var articlesDiv = document.getElementById('articles');
 
       articlesDiv.appendChild(articleDiv);
     });
+    }
 xhr.send();
 
     
