@@ -48,7 +48,6 @@ var articlesDiv = document.getElementById('articles');
 
       articlesDiv.appendChild(articleDiv);
     });
-
-    xhr.send();
+xhr.send();
 
     
